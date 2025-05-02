@@ -2,20 +2,14 @@
 
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import { CustomCursorSimple } from "@/components/custom-cursor-simple"
 import { Footer } from "@/components/footer"
-import { ProjectCard } from "@/components/project-card"
 import { projects } from "@/data/projects"
+import { ProjectsList } from "@/components/projects-list"
 
 export default function ProjectsPage() {
-  const [visibleProjects, setVisibleProjects] = useState(3)
-  const showMore = () => {
-    setVisibleProjects(prev => prev + 3)
-  }
-
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <CustomCursorSimple />
@@ -44,23 +38,7 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="space-y-8">
-            {projects.slice(0, visibleProjects).map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-
-          {visibleProjects < projects.length && (
-            <div className="mt-8 text-center">
-              <Button 
-                variant="outline" 
-                onClick={showMore}
-                className="bg-white hover:bg-gray-50"
-              >
-                See More Projects
-              </Button>
-            </div>
-          )}
+          <ProjectsList initialProjects={projects} />
 
           <div className="mt-12 text-center">
             <p className="text-gray-500 mb-6">Interested in working with us on your next project?</p>

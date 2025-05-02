@@ -102,11 +102,12 @@ export function Header() {
             </div>
           </SheetContent>
         </Sheet>
-        <Link href="/#contact">
+        
+        <Link href="/#contact" className="hidden lg:block">
           <Button
             variant="outline"
             size="sm"
-            className="hidden lg:inline-flex focus:ring-2 focus:ring-black focus:ring-offset-2"
+            className="focus:ring-2 focus:ring-black focus:ring-offset-2"
             aria-label="Connect with us"
           >
             <span className="font-mono">connect()</span>

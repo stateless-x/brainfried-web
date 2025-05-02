@@ -1,5 +1,3 @@
-"use client"
-
 import { CustomCursorSimple } from "@/components/custom-cursor-simple"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
