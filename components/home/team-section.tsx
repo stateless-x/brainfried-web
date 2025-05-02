@@ -177,9 +177,10 @@ export function TeamSection() {
           <Button
             variant="outline"
             size="sm"
-            className="rounded-full h-10 w-10 p-0 focus:ring-2 focus:ring-black focus:ring-offset-2"
+            className="rounded-full h-10 w-10 p-0 focus:ring-2 focus:ring-black focus:ring-offset-2 fixed bottom-8 right-8 opacity-0 transition-opacity duration-300"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Back to top"
+            id="back-to-top"
           >
             <ArrowRight className="h-4 w-4 rotate-270" style={{ transform: "rotate(-90deg)" }} />
             <span className="sr-only">Back to top</span>
@@ -188,4 +189,18 @@ export function TeamSection() {
       </div>
     </motion.section>
   )
+}
+
+// Add scroll event listener
+if (typeof window !== 'undefined') {
+  window.addEventListener('scroll', () => {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (backToTopButton) {
+      if (window.scrollY > window.innerHeight) {
+        backToTopButton.classList.add('opacity-100');
+      } else {
+        backToTopButton.classList.remove('opacity-100');
+      }
+    }
+  });
 }
