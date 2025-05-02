@@ -37,11 +37,20 @@ export function GoldenSignalAnimation() {
         },
       })
 
-      dotControls.set({ offsetDistance: "0%" })
-      animateDot()
+      // Only set and restart animation if component is still mounted
+      if (containerRef.current) {
+        dotControls.set({ offsetDistance: "0%" })
+        animateDot()
+      }
     }
 
+    // Start initial animation
     animateDot()
+
+    // Cleanup function to prevent memory leaks
+    return () => {
+      dotControls.stop()
+    }
   }, [dotControls])
 
   return (
