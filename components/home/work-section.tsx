@@ -25,29 +25,30 @@ export function WorkSection() {
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-10 py-12">
           {/* Only show the flagship project */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="group relative overflow-hidden rounded-lg border border-gray-200 p-6"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent group-hover:from-transparent group-hover:to-black/5 transition-all duration-500" />
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <div className="font-mono text-sm text-gray-500">flagship_</div>
-                <h3 className="text-2xl font-bold">braincase</h3>
-                <p className="mt-2 text-gray-500">
-                  an educational AI platform empowering teachers to create higher quality learning materials and enhance
-                  the teaching experience.
-                </p>
-              </div>
-              <div className="mt-4 md:mt-0 md:ml-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 group-hover:border-black transition-all duration-300">
-                  <Plus className="h-5 w-5" />
+          <Link href="https://braincase.app" target="_blank" rel="noopener noreferrer">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="group relative overflow-hidden rounded-lg border border-gray-200 p-6"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent group-hover:from-transparent group-hover:to-black/5 transition-all duration-500" />
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div>
+                  <div className="font-mono text-sm text-gray-500">flagship_</div>
+                  <h3 className="text-2xl font-bold">braincase</h3>
+                  <p className="mt-2 text-gray-500">
+                    an educational AI platform empowering teachers to create higher quality learning materials and enhance
+                    the teaching experience.
+                  </p>
+                </div>
+                <div className="mt-4 md:mt-0 md:ml-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 group-hover:border-black transition-all duration-300">
+                    <Plus className="h-5 w-5" />
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-
+            </motion.div>
+          </Link>
           {/* See All Projects button */}
           <div className="flex justify-center mt-4">
             <Button

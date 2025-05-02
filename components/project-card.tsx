@@ -15,7 +15,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const toggleExpand = () => {
-    setIsExpanded(!isExpanded)
+    if (project.link) {
+      window.open(project.link, '_blank', 'noopener,noreferrer')
+    }
   }
 
   return (
@@ -45,7 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isExpanded && (
           <motion.div
             id={`project-details-${project.id}`}
@@ -122,7 +124,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   )
 }

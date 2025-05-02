@@ -9,37 +9,40 @@ import { Button } from "@/components/ui/button"
 export function TeamSection() {
   const teamMembers = [
     {
-      name: "Askpurin",
+      name: "AskPurin",
       role: "Team Lead",
-      bio: "Architect of elegant code solutions with a passion for creating seamless user experiences. Led a 40% performance improvement for our flagship product.",
-      image: "/placeholder.svg?height=400&width=400",
+      bio:"With one foot in code and the other in leadership, I help teams build great products—efficiently, thoughtfully, and with a human touch",
+      image: "/team/pooh.png?height=400&width=400",
       social: {
         github: "https://github.com/askpurin",
         twitter: "https://twitter.com/askpurin",
         linkedin: "https://linkedin.com/in/askpurin",
       },
+      url: "https://github.com/stateless-x",
     },
     {
       name: "iiihsy",
-      role: "Design Lead",
-      bio: "Visionary designer transforming concepts into beautiful interfaces that tell compelling stories. Created award-winning UI for the Ye platform.",
-      image: "/placeholder.svg?height=400&width=400",
+      role: "UX Designer",
+      bio: "I design delightful, intuitive experiences that make users feel right at home—backed by empathy, research, and a love for clean design.",
+      image: "/team/ice.jpg?height=400&width=400",
       social: {
         github: "https://github.com/iiihsy",
         twitter: "https://twitter.com/iiihsy",
         linkedin: "https://linkedin.com/in/iiihsy",
       },
+      url: "https://www.behance.net/iiihsy#",
     },
     {
       name: "Kira505",
-      role: "Core Developer",
-      bio: "Problem-solving engineer with expertise in building robust systems that scale. Optimized Gold Shopping's checkout flow, increasing conversions by 25%.",
-      image: "/placeholder.svg?height=400&width=400",
+      role: "Data Engineer",
+      bio: "I'm a data engineer with a passion for building scalable and efficient systems that help businesses make data-driven decisions.",
+      image: "/team/almond.jpg?height=400&width=400",
       social: {
         github: "https://github.com/kira505",
         twitter: "https://twitter.com/kira505",
         linkedin: "https://linkedin.com/in/kira505",
       },
+      url: "https://th.linkedin.com/in/parisorncha",
     },
   ]
 
@@ -86,51 +89,54 @@ export function TeamSection() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="mt-12 text-center">
-                <h3 className="font-mono text-xl font-bold">{member.name}</h3>
-                <p className="text-sm font-medium text-gray-500">{member.role}</p>
-                <p className="mt-4 text-sm text-gray-600">{member.bio}</p>
-                <div className="mt-6 flex justify-center space-x-4">
-                  <a
-                    href={member.social.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-gray-200 p-2 transition-colors hover:border-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-                    aria-label={`${member.name}'s GitHub profile`}
-                  >
-                    <Github className="h-4 w-4" />
-                    <span className="sr-only">GitHub</span>
-                  </a>
-                  <a
-                    href={member.social.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-gray-200 p-2 transition-colors hover:border-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-                    aria-label={`${member.name}'s Twitter profile`}
-                  >
-                    <Twitter className="h-4 w-4" />
-                    <span className="sr-only">Twitter</span>
-                  </a>
-                  <a
-                    href={member.social.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-gray-200 p-2 transition-colors hover:border-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-                    aria-label={`${member.name}'s LinkedIn profile`}
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    <span className="sr-only">LinkedIn</span>
-                  </a>
+              <Link href={member?.url} target="_blank" rel="noopener noreferrer">
+                <div className="mt-12 text-center">
+                  <h3 className="font-mono text-xl font-bold">{member.name}</h3>
+                  <p className="text-sm font-medium text-gray-500">{member.role}</p>
+                  <p className="mt-4 text-sm text-gray-600">{member.bio}</p>
+                  {/* social links */}
+                  {/* <div className="mt-6 flex justify-center space-x-4">
+                    <a
+                      href={member.social.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-gray-200 p-2 transition-colors hover:border-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                      aria-label={`${member.name}'s GitHub profile`}
+                    >
+                      <Github className="h-4 w-4" />
+                      <span className="sr-only">GitHub</span>
+                    </a>
+                    <a
+                      href={member.social.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-gray-200 p-2 transition-colors hover:border-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                      aria-label={`${member.name}'s Twitter profile`}
+                    >
+                      <Twitter className="h-4 w-4" />
+                      <span className="sr-only">Twitter</span>
+                    </a>
+                    <a
+                      href={member.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-gray-200 p-2 transition-colors hover:border-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                      aria-label={`${member.name}'s LinkedIn profile`}
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span className="sr-only">LinkedIn</span>
+                    </a>
+                  </div> */}
                 </div>
-              </div>
+              </Link>
               <div className="mt-6 h-[1px] w-full bg-gray-100 transition-all duration-300 group-hover:bg-black" />
-              <Button
+              {/* <Button
                 variant="ghost"
                 className="mt-4 w-full font-mono text-xs transition-colors group-hover:bg-black group-hover:text-white focus:ring-2 focus:ring-black focus:ring-offset-2"
                 aria-label={`View ${member.name}'s profile`}
               >
                 view profile
-              </Button>
+              </Button> */}
             </motion.div>
           ))}
         </div>

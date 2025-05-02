@@ -2,6 +2,7 @@
 import { useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { motion, useInView } from "framer-motion"
+import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { GoldenSignalAnimation } from "@/components/golden-signal-animation"
@@ -31,29 +32,31 @@ export function HeroSection() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <Button className="bg-black text-white hover:bg-gray-800 relative z-10 overflow-hidden group">
-                <span className="relative z-10 flex items-center">
-                  explore
+              <Link href="/#services">
+                <Button className="bg-black text-white hover:bg-gray-800 relative z-10 overflow-hidden group">
+                  <span className="relative z-10 flex items-center">
+                    explore
+                    <motion.span
+                      className="ml-2 flex items-center"
+                      animate={isInView ? { x: [0, 5, 0] } : {}}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Number.POSITIVE_INFINITY,
+                        repeatType: "loop",
+                        ease: "easeInOut",
+                      }}
+                    >
+                      <ArrowRight className="h-4 w-4" />
+                    </motion.span>
+                  </span>
                   <motion.span
-                    className="ml-2 flex items-center"
-                    animate={isInView ? { x: [0, 5, 0] } : {}}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Number.POSITIVE_INFINITY,
-                      repeatType: "loop",
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <ArrowRight className="h-4 w-4" />
-                  </motion.span>
-                </span>
-                <motion.span
-                  className="absolute inset-0 bg-amber-400 z-0"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "0%" }}
-                  transition={{ duration: 0.3 }}
-                />
-              </Button>
+                    className="absolute inset-0 bg-amber-400 z-0"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Button>
+              </Link>
               <motion.div
                 className="absolute -bottom-1 -right-1 w-3 h-3"
                 animate={

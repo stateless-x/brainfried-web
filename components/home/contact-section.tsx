@@ -44,16 +44,17 @@ export function ContactSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button
+              {/* <Button
                 className="bg-black text-white hover:bg-gray-800 focus:ring-2 focus:ring-black focus:ring-offset-2"
                 aria-label="Start a project"
               >
                 Start a Project
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              </Button> */}
               <Button
                 variant="outline"
-                className="focus:ring-2 focus:ring-black focus:ring-offset-2"
+                className="bg-black text-white hover:bg-gray-800 focus:ring-2 focus:ring-black focus:ring-offset-2"
+                // className="focus:ring-2 focus:ring-black focus:ring-offset-2"
                 aria-label="View our portfolio"
               >
                 <Link href="#work">View Our Portfolio</Link>
