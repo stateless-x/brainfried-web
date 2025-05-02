@@ -1,14 +1,14 @@
 export interface Project {
-  id: string
-  title: string
-  category: string
-  description: string
-  longDescription: string
-  technologies: string[]
-  image: string
-  link: string | null
-  github: string | null
-  achievements: string[]
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  image: string;
+  link: string | null;
+  github: string | null;
+  achievements: string[];
 }
 
 export const projects: Project[] = [
@@ -31,20 +31,38 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "gold-shopping",
-    title: "Gold Shopping",
-    category: "e-commerce_",
-    description: "A premium online shopping experience featuring elegant design and seamless user journey.",
+    id: "praewbank",
+    title: "Praewbank's Wedding",
+    category: "utility_",
+    description: "A modern and heartfelt wedding website for Bank and Praew.",
     longDescription:
-      "Gold Shopping is a luxury e-commerce platform designed for high-end retail products. The site features a minimalist, elegant interface with emphasis on product photography and seamless user experience. Key features include personalized product recommendations, virtual try-on capabilities for select items, and a streamlined checkout process optimized for conversion. The platform also includes a sophisticated inventory management system and analytics dashboard for merchants.",
-    technologies: ["Next.js", "Tailwind CSS", "Stripe", "Sanity CMS"],
+      "A beautifully crafted wedding website made for Bank and Praew's special day. It features their love story, event details, RSVP management, and a gallery to share memories with guests. Designed with elegance and mobile responsiveness in mind, the site delivers a seamless experience for both local and international guests.",
+    technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+    image: "/placeholder.svg?height=400&width=600",
+    link: "https://praewbankforevermore.love",
+    github: null,
+    achievements: [
+      "Streamlined RSVP collection and guest communication",
+      "Optimized for mobile, ensuring access for all invitees",
+      "Delivered a memorable, shareable digital experience for the couple",
+    ],
+  },
+  {
+    id: "gold-shopping",
+    title: "Hua Seng Heng Gold Store",
+    category: "e-commerce_",
+    description:
+      "A modern, vibrant e-commerce redesign for Hua Seng Heng’s gold shopping experience.",
+    longDescription:
+      "This project involved a complete UI/UX redesign for Hua Seng Heng’s online gold store. The designer created a bold, modern visual identity that reflects both the brand’s heritage and its forward-looking approach. With a vibrant color palette, clean layouts, and user-focused interactions, the design elevates the shopping experience for a new generation of gold buyers. The redesign focused on clarity, trustworthiness, and mobile-first usability.",
+    technologies: ["Figma"],
     image: "/placeholder.svg?height=400&width=600",
     link: "https://goldshopping.huasengheng.com/",
     github: null,
     achievements: [
-      "Increased conversion rate by 25% compared to previous platform",
-      "Reduced cart abandonment by 30%",
-      "Improved page load speed by 40%",
+      "Delivered a refreshed, modern look for a traditional gold brand",
+      "Enhanced visual hierarchy and accessibility across all screen sizes",
+      "Improved perceived trust and shopping confidence through thoughtful UI",
     ],
   },
   {
@@ -56,7 +74,7 @@ export const projects: Project[] = [
       "Scheduler Pro is a comprehensive time management solution designed for busy professionals and teams. The application uses AI to analyze scheduling patterns, meeting effectiveness, and productivity metrics to suggest optimal scheduling arrangements. Features include automated meeting scheduling across time zones, smart conflict resolution, integration with popular calendar platforms, and detailed analytics on time usage patterns.",
     technologies: ["Vue.js", "Express", "PostgreSQL", "Google Calendar API"],
     image: "/placeholder.svg?height=400&width=600",
-    link: 'https://hatyai-bbq-git-main-stateless-projects.vercel.app/',
+    link: "https://hatyai-bbq-git-main-stateless-projects.vercel.app/",
     github: null,
     achievements: [
       "Saved users an average of 5 hours per week on scheduling tasks",
@@ -70,8 +88,7 @@ export const projects: Project[] = [
     category: "utility_",
     description:
       "Mining One is a utility app that help tracking bitcoin mining pool rewards in different time periods.",
-    longDescription:
-      "Nothing but Ye",
+    longDescription: "Nothing but Ye",
     technologies: ["JavaScript", "WebGL", "Canvas API", "Firebase"],
     image: "/placeholder.svg?height=400&width=600",
     link: "https://stateless-x.github.io/ye/",
@@ -86,10 +103,8 @@ export const projects: Project[] = [
     id: "ye",
     title: "Ye",
     category: "pure-art_",
-    description:
-      "Ye",
-    longDescription:
-      "Nothing but Ye",
+    description: "Ye",
+    longDescription: "Nothing but Ye",
     technologies: ["JavaScript", "WebGL", "Canvas API", "Firebase"],
     image: "/placeholder.svg?height=400&width=600",
     link: "https://stateless-x.github.io/ye/",
@@ -100,4 +115,4 @@ export const projects: Project[] = [
       "Community of 5,000+ artists sharing their creations",
     ],
   },
-]
+];
